@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gestionetu.css">
+  <title>Gestion des Etudiants</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Gestion des Etudiants</h1>
+    <div class="input-container">
+      <input type="text" id="nomInput" placeholder="Nom de l'étudiant">
+      <input type="number" id="ageInput" placeholder="Age">
+      <input type="number" id="noteInput" placeholder="Note" step="0.01" min="0" max="20">
+      <button id="addButton">Ajouter</button>
+    </div>
+    
+    <div class="filters">
+      <button id="filterButton">Filtrer (Note ≥ 10)</button>
+      <button id="majusculeButton">Afficher Noms en Majuscule</button>
+      <div id="moyenne">Moyenne des Notes : <span id="moyenneValue">0.00</span></div>
+    </div>
+    
+    <table id="etudiantTable">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Age</th>
+          <th>Note</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="etudiantListe"></tbody>
+    </table>
+  </div>
+
+  <script src="gestionetu.js"></script>
+</body>
+</html>
